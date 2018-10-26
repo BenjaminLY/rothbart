@@ -1,0 +1,249 @@
+.video {
+    cursor: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+
+    .is-back {
+        display: none;
+        position: fixed;
+        z-index: 20;
+        top: 15px;
+        left: 15px;
+    }
+    .video-player {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        video {
+            width: 100%;
+            &::-webkit-media-controls {display: none;}
+        }
+        .buffer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: #ff0000;
+        }
+    }
+    &.display {
+        .is-back, .video-controls {display: block;}
+        cursor: default;
+    }
+
+    .video-controls {
+        display: none;
+        position: fixed;
+        left: 0px;
+        bottom: 10%;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+
+        .video-box {
+            width: 90%;
+            margin: 0 auto;
+
+            .progression {
+                position: relative;
+                width: calc(100% - 10px);
+                height: 40px;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                .progress-bar {
+                    width: calc(100% - 150px);
+                    height: 10px;
+                    float: left;
+                    progress {
+                        width: 100%;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        background: #c00;
+
+                        &::-webkit-progress-bar {
+                            background-color: #ff000;
+                        }
+                    }
+                }
+                .indicator {
+                    display: none;
+                    background: #fff;
+                    color: #000;
+                    width: 60px;
+                    height: 30px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    position: absolute;
+                    top: -22px;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                }
+                &:hover .indicator {
+                    display: flex;
+                }
+                .info {
+                    margin-left: 10px;
+                    width: 150px;
+                    height: 30px;
+                    float: left;
+                    font-size: 30px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .control-buttons {
+                clear: both;
+                width: calc(100% - 20px);
+                height: 60px;
+                padding: 10px;
+                background: rgba(255, 0, 0, 0.5);
+                border-radius: 10px;
+                .button {
+                    padding: 15px 10px;
+                    border-radius: 6px;
+                    border: none;
+                    font-size: 20px;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &:focus {outline:0;}
+
+                    i {
+                        margin-right: 10px;
+                    }
+
+                    &.is-large {
+                        font-size: 24px;
+                        padding: 15px 30px;
+                    }
+
+                    &.is-blue{
+                        background: #006FEF;
+                        color: #fff;
+                    }
+
+                    &.is-full-width {
+                        width: 100%;
+                    }
+
+                    &.is-white{
+                        background: rgba(255, 255, 255, 0.1);
+                        color: #fff;
+
+                        &:hover{
+                            background: rgba(255, 255, 255, 1);
+                            color: #000;
+                        }
+                    }
+
+                    &.close {
+                        border: none;
+                        background: none;
+                        font-size: 20px;
+                        color: #000;
+                        &:hover {
+                            color: #c00;
+                        }
+                    }
+
+                    &.is-transparent{
+                        background: transparent;
+                        color: #fff;
+                    }
+
+                    &.is-black {
+                        background: rgba(0,0,0,.75);
+                        color: #fff;
+                    }
+                }
+
+                .start {
+                    float: left;
+                }
+                .end {
+                    float: right;
+                }
+
+                .control-button {
+                    float: left;
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px;
+                    .button-control {
+                        cursor: pointer;
+                        font-size: 30px;
+                        font-weight: 200;
+                        color: #fff;
+                        background: none;
+                        border: none;
+
+                        &:focus {outline:0;}
+                    }
+
+                    &.volume {
+                        .button-control {
+                            position: absolute;
+                            z-index: 20;
+                        }
+                        .slider {
+                            z-index: 19;
+                            display: none;
+                            position: absolute;
+                            top: -150px;
+                            width: 50px;
+                            padding-bottom: 60px;
+
+                            .content {
+                                display: flex;
+                                border-radius: 6px;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 120px;
+                                color: #000;
+                                background: #fff;
+                                input[type=range]
+                                {
+                                    &[orient=vertical] {
+                                        writing-mode: bt-lr; /* IE */
+                                        -webkit-appearance: slider-vertical; /* WebKit */
+                                        width: 20px;
+                                        height: 100px;
+                                    }
+                                }
+
+                            }
+                        }
+                        &:hover{
+                            .slider{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

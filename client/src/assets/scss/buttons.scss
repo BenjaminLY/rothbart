@@ -1,0 +1,99 @@
+.is-clickable {
+    cursor: pointer;
+}
+
+.replay {
+    -moz-transform: scale(-1, 1) rotate(-80deg);
+    -webkit-transform: scale(-1, 1) rotate(-80deg);
+    -o-transform: scale(-1, 1) rotate(-80deg);
+    -ms-transform: scale(-1, 1) rotate(-80deg);
+    transform: scale(-1, 1) rotate(-80deg);
+}
+
+.button {
+    i {
+        margin-right: 10px;
+    }
+    &.is-back {
+        background: rgba(255, 0, 0, 0.5);
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    &.is-buy{
+        background: #9A3483;
+        border: 2px solid transparent;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        width: 290px;
+        height: 60px;
+        margin: 0 15px;
+        &.is-active{
+            opacity: 1;
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            border: 2px solid #fff;
+        }
+        .columns{
+            width: 100%;
+            .price {
+                font-size: 20px;
+                font-weight: 400;
+                text-align: right;
+                line-height: 40px;
+            }
+        }
+    }
+    &.is-rent{
+        background: #3A288C;
+        border: 2px solid transparent;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        width: 290px;
+        height: 60px;
+        margin: 0 15px;
+        &.is-active{
+            opacity: 1;
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            border: 2px solid #fff;
+        }
+        .columns{
+            width: 100%;
+            .price {
+                font-size: 20px;
+                font-weight: 400;
+                text-align: right;
+                line-height: 40px;
+            }
+        }
+    }
+    &.is-circle {
+        background: transparent;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 2px solid #fff;
+        padding: 10px;
+
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+    &.is-transparent {
+        display: block;
+        background: transparent;
+        border: none;
+        color: #fff;
+        width: 60px;
+        i {
+            font-size: 30px;
+        }
+    }
+}

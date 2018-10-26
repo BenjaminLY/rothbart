@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@import "video";
+@import "home";
+@import "buttons";
+@import "signin";
+@import "plan";
+@import "menu";
+@import "form";
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Nunito Sans', arial, helvetica;
+}
+.separator {
+    border-left: 1px solid #fff;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.legal-mentions {
+    background: #fff;
+    padding: 15px;
+    color: #000;
+    // border: 4px solid #ff3860;
+    border-radius: 10px;
+}

@@ -1,0 +1,45 @@
+.plans {
+    padding-bottom: 15px;
+    .plan {
+        border: 1px solid #ff3860;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        min-height: 200px;
+        text-align: center;
+
+        &.is-active, &:hover{
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+        }
+
+        &.is-active {
+            background: #ff3860;
+            color: #fff;
+
+            strong, h2 {
+                color: #fff;
+            }
+        }
+
+        strong {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 15px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 34px;
+        }
+    }
+}
+.tabs a:hover, .tabs li.is-active a {
+    border-bottom-color: #ff3860;
+    color: #ff3860;
+}
